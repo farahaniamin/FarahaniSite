@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Webhooks, rate limits, error handling, persistent sessions and idempotent payments — what keeps a bot alive in production.">
+    <meta name="author" content="Amin Farahani">
+
+    <meta property="og:title" content="Building reliable Telegram bots with grammY.js">
+    <meta property="og:description" content="Webhooks, rate limits, error handling, persistent sessions and idempotent payments — what keeps a bot alive in production.">
+    <meta property="og:type" content="article">
+
+    <title>Building reliable Telegram bots with grammY.js — Amin Farahani</title>
+
+    <link rel="shortcut icon" href="../assets/imgs/favicon.ico">
+    <link rel="icon" sizes="32x32" href="../assets/imgs/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="../assets/imgs/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Mozilla+Text:wght@200..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/plugins.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+
+</head>
+
+<body class="home-freelancer article-page">
+
+
+    <div class="cursor"></div>
+    <div class="blur-div"></div>
+
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+
+    <!-- ==================== Start Navbar ==================== -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container align-items-center">
+
+            <a class="logo logo-text" href="../index.html">Amin Farahani<span class="main-color">.</span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#work"><span class="rolling-text">Work</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#expertise"><span class="rolling-text">Expertise</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#highlights"><span class="rolling-text">Highlights</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#blog"><span class="rolling-text">Blog</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#contact"><span class="rolling-text">Contact</span></a></li>
+                </ul>
+            </div>
+
+            <div class="dark-mode-icon">
+                <button type="button" class="theme-icon" aria-label="Toggle between dark and light mode">
+                    <i aria-hidden="true" class="pe-7s-moon moon"></i>
+                    <i aria-hidden="true" class="pe-7s-sun sun"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== End Navbar ==================== -->
+
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main class="o-hidden">
+
+                <!-- ==================== Start Article Header ==================== -->
+
+                <header class="pg-hero article-hero">
+                    <div class="container">
+                        <div class="row mb-60px">
+                            <div class="col-lg-2">
+                                <div class="pt-15px">
+                                    <span class="butn-bord-sm mb-15px">Telegram</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <h1 class="fs-70">Building reliable Telegram bots with grammY.js</h1>
+                                <div class="info d-flex flex-wrap mt-40px align-items-center">
+                                    <div class="d-flex align-items-center mr-50px mb-15px">
+                                        <span class="fit-img w-60px h-60px o-hidden border-radius-50">
+                                            <img src="../assets/imgs/hero/amin.webp" alt="Amin Farahani">
+                                        </span>
+                                        <span class="ml-20px">
+                                            <span class="d-block opacity-7 mb-5px">Author</span>
+                                            <span class="fs-18 fw-500">Amin Farahani</span>
+                                        </span>
+                                    </div>
+                                    <div class="mr-50px mb-15px">
+                                        <span class="d-block opacity-7 mb-5px">Published</span>
+                                        <span class="fs-18 fw-500">October 6, 2026</span>
+                                    </div>
+                                    <div class="mb-15px">
+                                        <span class="d-block opacity-7 mb-5px">Reading time</span>
+                                        <span class="fs-18 fw-500">5 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="article-cover o-hidden border-radius-30px">
+                            <img src="../assets/imgs/blog/blog-telegram.webp" alt="Building reliable Telegram bots with grammY.js">
+                        </div>
+                    </div>
+                </header>
+
+                <!-- ==================== End Article Header ==================== -->
+
+
+                <!-- ==================== Start Article Body ==================== -->
+
+                <section class="pb-80px pt-80px">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="main-post">
+                                    <article class="item pb-60px">
+                                        <div class="text mb-30px"><p class="lead-p">Getting a Telegram bot to answer <code>/start</code> takes ten minutes. Keeping it answering for months — through traffic spikes, API errors, restarts and payment callbacks — is the real work. After building more than ten bots for automation, API-driven workflows and crypto payments, these are the habits I now apply to every project built with <strong>grammY</strong>.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>1. Long polling for development, webhooks for production</h4></div>
+                                        <div class="text mb-20px"><p>Long polling (<code>bot.start()</code>) is perfect on a laptop: no public URL, no TLS. In production I switch to webhooks — Telegram pushes each update to an HTTPS endpoint, so the bot only works when there is something to do and scales behind a normal web server.</p></div>
+                                        <pre class="code" data-lang="js"><code>import express from &quot;express&quot;;
+import { Bot, webhookCallback } from &quot;grammy&quot;;
+
+const bot = new Bot(process.env.BOT_TOKEN);
+bot.command(&quot;start&quot;, (ctx) =&gt; ctx.reply(&quot;Hi! How can I help?&quot;));
+
+const app = express();
+app.use(express.json());
+app.post(&quot;/telegram&quot;, webhookCallback(bot, &quot;express&quot;, {
+  secretToken: process.env.WEBHOOK_SECRET, // rejects requests not sent by Telegram
+}));
+app.listen(3000);</code></pre>
+                                        <div class="text mb-20px"><p>Register the URL once, with the same secret, so Telegram signs every request:</p></div>
+                                        <pre class="code" data-lang="js"><code>await bot.api.setWebhook(&quot;https://bot.example.com/telegram&quot;, {
+  secret_token: process.env.WEBHOOK_SECRET,
+});</code></pre>
+                                        <div class="text mb-20px"><p>Answer webhook requests quickly. If a handler needs to call a slow API or generate a report, acknowledge the user first and move the heavy part to a queue or background job.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>2. Respect rate limits — and let the library retry</h4></div>
+                                        <div class="text mb-20px"><p>Telegram throttles bots: roughly one message per second in a single chat, about twenty per minute in a group, and around thirty per second overall when broadcasting. When you exceed them the API returns <code>429 Too Many Requests</code> with a <code>retry_after</code> value. Instead of handling that by hand everywhere, install the auto-retry plugin once:</p></div>
+                                        <pre class="code" data-lang="js"><code>import { autoRetry } from &quot;@grammyjs/auto-retry&quot;;
+
+bot.api.config.use(autoRetry());</code></pre>
+                                        <div class="text mb-20px"><p>For broadcasts to thousands of users, also pace the sending itself (a simple queue or grammY's throttler plugin) so retries stay the exception, not the rule.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>3. One place for errors</h4></div>
+                                        <div class="text mb-20px"><p>An unhandled exception in one handler should never take the whole bot down. With long polling, <code>bot.catch</code> is the single place to log and classify errors:</p></div>
+                                        <pre class="code" data-lang="js"><code>import { GrammyError, HttpError } from &quot;grammy&quot;;
+
+bot.catch((err) =&gt; {
+  const e = err.error;
+  if (e instanceof GrammyError) {
+    console.error(&quot;Telegram rejected a request:&quot;, e.description);
+  } else if (e instanceof HttpError) {
+    console.error(&quot;Could not reach Telegram:&quot;, e);
+  } else {
+    console.error(&quot;Bug in a handler:&quot;, e);
+  }
+});</code></pre>
+                                        <div class="text mb-20px"><p>Behind a webhook, errors bubble up to your web framework instead — wrap your handlers with <code>bot.errorBoundary()</code> so the same logic applies in both modes.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>4. State that survives a restart</h4></div>
+                                        <div class="text mb-20px"><p>grammY's sessions keep per-chat data, but the default storage lives in memory and disappears on every deploy. For anything that matters — a multi-step form, a cart, an onboarding step — use a persistent storage adapter such as Redis:</p></div>
+                                        <pre class="code" data-lang="js"><code>import { session } from &quot;grammy&quot;;
+import { RedisAdapter } from &quot;@grammyjs/storage-redis&quot;;
+
+bot.use(session({
+  initial: () =&gt; ({ step: &quot;idle&quot;, cart: [] }),
+  storage: new RedisAdapter({ instance: redis }),
+}));</code></pre>
+                                        <div class="text mb-20px"><p>For longer dialogues, the conversations plugin lets you write the flow as straight-line code (<code>await conversation.wait()</code>) instead of a hand-made state machine.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>5. Make payments and callbacks idempotent</h4></div>
+                                        <div class="text mb-20px"><p>Payment confirmations — from a gateway webhook or a blockchain watcher — can arrive twice, late, or out of order, and Telegram may redeliver an update after a timeout. Treat every external event as "maybe a duplicate":</p></div>
+                                        <div class="unorder-list mb-30px"><ul class="rest"><li>Store a unique key for each event (transaction hash, invoice id, <code>update_id</code>) with a database unique constraint.</li><li>Credit the user only inside the same transaction that inserts that key.</li><li>Always call <code>ctx.answerCallbackQuery()</code> so the button stops spinning, even when the action is rejected.</li></ul></div>
+                                        <div class="title mt-50px mb-20px"><h4>6. Deploy it like a service, not a script</h4></div>
+                                        <div class="unorder-list mb-30px"><ul class="rest"><li>Run it in Docker with a restart policy and a <code>/health</code> endpoint.</li><li>Keep the bot token and secrets in environment variables — and rotate the token in BotFather if it ever leaks.</li><li>Log every failed API call with the chat id and handler name, so a user report can be traced in seconds.</li><li>Put Cloudflare (or any reverse proxy) in front of the webhook and keep the origin closed to everything else.</li></ul></div>
+                                        <div class="post-note mb-30px"><strong>Takeaway:</strong> most bot outages are not clever bugs — they are missing retries, lost sessions and duplicated callbacks. Decide how each of those is handled before the first user arrives.</div>
+                                    </article>
+
+                                    <div class="info-area d-flex pt-50px">
+                                        <div class="tags d-flex align-items-center">
+                                            <div><span>Tags :</span></div>
+                                            <div><a href="../index.html#blog">Telegram</a><a href="../index.html#blog">grammY</a><a href="../index.html#blog">Node.js</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-navs d-flex justify-content-between mt-50px">
+                                        <div></div>
+                                        <a href="./scraped-data-to-structured-output.html" class="post-nav text-align-right">
+                                            <span class="fs-13 text-uppercase opacity-7">Next article →</span>
+                                            <h6 class="mt-10px">Turning scraped data into clean, structured outputs</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== End Article Body ==================== -->
+
+
+                <!-- ==================== Start CTA + Footer ==================== -->
+
+                <footer class="footer-style4 contact-footer">
+                    <div class="sub-bg border-radius-30px">
+                        <div class="container pb-80px pt-80px">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8 md-mb30">
+                                    <h2 class="fs-60 mb-15px">Have a project in mind?</h2>
+                                    <p>A bot, an integration, a store or a web app — let's talk about it.</p>
+                                </div>
+                                <div class="col-lg-4 d-flex justify-content-lg-end">
+                                    <a href="../index.html#contact" class="butn-arrow butn-rounded main-colorbg">
+                                        <span class="text-uppercase fs-14 fw-500">Get in touch</span>
+                                        <span class="arrow-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                            </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container pt-30px pb-30px line-top border-color-transparent-white-light">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="links">
+                                        <ul class="rest d-flex">
+                                            <li class="mr-30px"><a href="../index.html#work">Work</a></li>
+                                            <li class="mr-30px"><a href="../index.html#expertise">Expertise</a></li>
+                                            <li><a href="../index.html#blog">Blog</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="copyright d-flex">
+                                        <div class="ml-auto">
+                                            <p class="fz-13">© <span class="js-year">2026</span> Amin Farahani — Full-Stack Web Developer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- ==================== End CTA + Footer ==================== -->
+
+            </main>
+        </div>
+    </div>
+
+
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/jquery-migrate-3.4.0.min.js"></script>
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollSmoother.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/smoother-script.js"></script>
+    <script src="../assets/js/springer.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

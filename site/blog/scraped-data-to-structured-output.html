@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A practical pipeline — fetch, parse, normalize, validate, deduplicate and export — with Persian-specific normalization.">
+    <meta name="author" content="Amin Farahani">
+
+    <meta property="og:title" content="Turning scraped data into clean, structured outputs">
+    <meta property="og:description" content="A practical pipeline — fetch, parse, normalize, validate, deduplicate and export — with Persian-specific normalization.">
+    <meta property="og:type" content="article">
+
+    <title>Turning scraped data into clean, structured outputs — Amin Farahani</title>
+
+    <link rel="shortcut icon" href="../assets/imgs/favicon.ico">
+    <link rel="icon" sizes="32x32" href="../assets/imgs/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="../assets/imgs/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Mozilla+Text:wght@200..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/plugins.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+
+</head>
+
+<body class="home-freelancer article-page">
+
+
+    <div class="cursor"></div>
+    <div class="blur-div"></div>
+
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+
+    <!-- ==================== Start Navbar ==================== -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container align-items-center">
+
+            <a class="logo logo-text" href="../index.html">Amin Farahani<span class="main-color">.</span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#work"><span class="rolling-text">Work</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#expertise"><span class="rolling-text">Expertise</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#highlights"><span class="rolling-text">Highlights</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#blog"><span class="rolling-text">Blog</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#contact"><span class="rolling-text">Contact</span></a></li>
+                </ul>
+            </div>
+
+            <div class="dark-mode-icon">
+                <button type="button" class="theme-icon" aria-label="Toggle between dark and light mode">
+                    <i aria-hidden="true" class="pe-7s-moon moon"></i>
+                    <i aria-hidden="true" class="pe-7s-sun sun"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== End Navbar ==================== -->
+
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main class="o-hidden">
+
+                <!-- ==================== Start Article Header ==================== -->
+
+                <header class="pg-hero article-hero">
+                    <div class="container">
+                        <div class="row mb-60px">
+                            <div class="col-lg-2">
+                                <div class="pt-15px">
+                                    <span class="butn-bord-sm mb-15px">Data</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <h1 class="fs-70">Turning scraped data into clean, structured outputs</h1>
+                                <div class="info d-flex flex-wrap mt-40px align-items-center">
+                                    <div class="d-flex align-items-center mr-50px mb-15px">
+                                        <span class="fit-img w-60px h-60px o-hidden border-radius-50">
+                                            <img src="../assets/imgs/hero/amin.webp" alt="Amin Farahani">
+                                        </span>
+                                        <span class="ml-20px">
+                                            <span class="d-block opacity-7 mb-5px">Author</span>
+                                            <span class="fs-18 fw-500">Amin Farahani</span>
+                                        </span>
+                                    </div>
+                                    <div class="mr-50px mb-15px">
+                                        <span class="d-block opacity-7 mb-5px">Published</span>
+                                        <span class="fs-18 fw-500">October 14, 2026</span>
+                                    </div>
+                                    <div class="mb-15px">
+                                        <span class="d-block opacity-7 mb-5px">Reading time</span>
+                                        <span class="fs-18 fw-500">5 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="article-cover o-hidden border-radius-30px">
+                            <img src="../assets/imgs/blog/blog-scraping.webp" alt="Turning scraped data into clean, structured outputs">
+                        </div>
+                    </div>
+                </header>
+
+                <!-- ==================== End Article Header ==================== -->
+
+
+                <!-- ==================== Start Article Body ==================== -->
+
+                <section class="pb-80px pt-80px">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="main-post">
+                                    <article class="item pb-60px">
+                                        <div class="text mb-30px"><p class="lead-p">Collecting pages is the easy half of web scraping. The value is in what comes out the other end: rows that a sales team, a dashboard or another API can use without cleaning them again. Working on product, business and location data for sources like Torob, Google Maps and Neshan, I settled on a pipeline that keeps every stage simple and re-runnable.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>1. Split the job into stages</h4></div>
+                                        <div class="text mb-20px"><p><strong>Fetch → parse → normalize → validate → store → export.</strong> Each stage reads the output of the previous one, so a bug in parsing never means downloading everything again. I always keep the raw response (HTML or JSON) next to the parsed record — when the parser improves, I re-run it over the archive.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>2. Fetch politely and predictably</h4></div>
+                                        <div class="text mb-20px"><p>Before writing code, read the site's terms and <code>robots.txt</code>, and prefer an official API whenever one exists. Then limit concurrency, add delays, cache responses and retry transient failures with exponential backoff:</p></div>
+                                        <pre class="code" data-lang="js"><code>async function fetchWithRetry(url, tries = 4) {
+  for (let i = 0; i &lt; tries; i++) {
+    const res = await fetch(url, { headers: { Accept: &quot;application/json&quot; } });
+    if (res.ok) return res;
+    // only 429 and 5xx are worth retrying
+    if (res.status !== 429 &amp;&amp; res.status &lt; 500) throw new Error(`HTTP ${res.status}`);
+    const wait = 500 * 2 ** i + Math.random() * 300; // backoff + jitter
+    await new Promise((r) =&gt; setTimeout(r, wait));
+  }
+  throw new Error(`Gave up on ${url}`);
+}</code></pre>
+                                        <div class="title mt-50px mb-20px"><h4>3. Prefer structured sources over CSS selectors</h4></div>
+                                        <div class="text mb-20px"><p>Selectors break on every redesign. Many pages already ship their data in a structured form: JSON-LD blocks (<code>script[type=&quot;application/ld+json&quot;]</code>), framework state such as <code>__NEXT_DATA__</code>, or the JSON endpoints the page itself calls. Parse those first and fall back to the DOM only when you must.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>4. Normalize — especially Persian text</h4></div>
+                                        <div class="text mb-20px"><p>Iranian sources mix Persian, Arabic-Indic and Latin digits, Arabic and Persian letters, and prices in both Rial and Toman. If you don't normalize, "the same" shop shows up three times. A small set of helpers removes most of the noise:</p></div>
+                                        <pre class="code" data-lang="js"><code>const FA = &quot;۰۱۲۳۴۵۶۷۸۹&quot;;
+const AR = &quot;٠١٢٣٤٥٦٧٨٩&quot;;
+
+export function normalizeText(s = &quot;&quot;) {
+  return s
+    .replace(/[۰-۹]/g, (d) =&gt; FA.indexOf(d))   // Persian digits  → 0-9
+    .replace(/[٠-٩]/g, (d) =&gt; AR.indexOf(d))   // Arabic digits   → 0-9
+    .replace(/ي/g, &quot;ی&quot;).replace(/ك/g, &quot;ک&quot;)     // Arabic letters  → Persian
+    .replace(/\u200c+/g, &quot;\u200c&quot;)            // collapse repeated ZWNJ
+    .replace(/\s+/g, &quot; &quot;)
+    .trim();
+}
+
+export function normalizePhone(raw) {
+  const d = normalizeText(raw).replace(/\D/g, &quot;&quot;);
+  if (d.startsWith(&quot;98&quot;)) return &quot;+&quot; + d;
+  if (d.startsWith(&quot;0&quot;)) return &quot;+98&quot; + d.slice(1);
+  return null;
+}</code></pre>
+                                        <div class="text mb-20px"><p>Pick one currency unit for storage (I use Toman, where 1 Toman = 10 Rial) and convert at parse time, keeping the original string for audits.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>5. Validate every record — and keep the rejects</h4></div>
+                                        <div class="text mb-20px"><p>A schema turns silent garbage into visible errors. With zod, a place record might look like this:</p></div>
+                                        <pre class="code" data-lang="js"><code>import { z } from &quot;zod&quot;;
+
+const Place = z.object({
+  name: z.string().min(2),
+  category: z.string(),
+  phone: z.string().regex(/^\+98\d{10}$/).nullable(),
+  lat: z.number().min(24).max(40),   // rough bounding box of Iran
+  lng: z.number().min(44).max(64),
+});</code></pre>
+                                        <div class="text mb-20px"><p>Records that fail validation go to a separate table with the reason. That list is the best to-do list for improving the parser.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>6. Deduplicate with stable keys</h4></div>
+                                        <div class="unorder-list mb-30px"><ul class="rest"><li><strong>Products:</strong> the source's own id or a canonical URL.</li><li><strong>Places:</strong> normalized name + coordinates rounded to 4 decimals (about 11 m).</li><li>Upsert instead of insert, and keep <code>first_seen</code> / <code>last_seen</code> timestamps — price and status history come for free.</li></ul></div>
+                                        <div class="title mt-50px mb-20px"><h4>7. Export for the people who will use it</h4></div>
+                                        <div class="unorder-list mb-30px"><ul class="rest"><li><strong>CSV with a UTF-8 BOM</strong> — without it, Excel shows Persian text as gibberish.</li><li><strong>JSON</strong> for other services, with a documented schema.</li><li><strong>Google Sheets</strong> when a non-technical team needs to filter and comment.</li></ul></div>
+                                        <div class="post-note mb-30px"><strong>Takeaway:</strong> a scraper is finished when its output can be trusted without a second cleanup pass. Normalization, validation and deduplication are where that trust comes from.</div>
+                                    </article>
+
+                                    <div class="info-area d-flex pt-50px">
+                                        <div class="tags d-flex align-items-center">
+                                            <div><span>Tags :</span></div>
+                                            <div><a href="../index.html#blog">Scraping</a><a href="../index.html#blog">Data</a><a href="../index.html#blog">Node.js</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-navs d-flex justify-content-between mt-50px">
+                                        <a href="./telegram-bots-grammy.html" class="post-nav text-align-left">
+                                            <span class="fs-13 text-uppercase opacity-7">← Previous article</span>
+                                            <h6 class="mt-10px">Building reliable Telegram bots with grammY.js</h6>
+                                        </a>
+                                        <a href="./woocommerce-without-plugin-bloat.html" class="post-nav text-align-right">
+                                            <span class="fs-13 text-uppercase opacity-7">Next article →</span>
+                                            <h6 class="mt-10px">Custom WooCommerce features without plugin bloat</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== End Article Body ==================== -->
+
+
+                <!-- ==================== Start CTA + Footer ==================== -->
+
+                <footer class="footer-style4 contact-footer">
+                    <div class="sub-bg border-radius-30px">
+                        <div class="container pb-80px pt-80px">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8 md-mb30">
+                                    <h2 class="fs-60 mb-15px">Have a project in mind?</h2>
+                                    <p>A bot, an integration, a store or a web app — let's talk about it.</p>
+                                </div>
+                                <div class="col-lg-4 d-flex justify-content-lg-end">
+                                    <a href="../index.html#contact" class="butn-arrow butn-rounded main-colorbg">
+                                        <span class="text-uppercase fs-14 fw-500">Get in touch</span>
+                                        <span class="arrow-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                            </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container pt-30px pb-30px line-top border-color-transparent-white-light">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="links">
+                                        <ul class="rest d-flex">
+                                            <li class="mr-30px"><a href="../index.html#work">Work</a></li>
+                                            <li class="mr-30px"><a href="../index.html#expertise">Expertise</a></li>
+                                            <li><a href="../index.html#blog">Blog</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="copyright d-flex">
+                                        <div class="ml-auto">
+                                            <p class="fz-13">© <span class="js-year">2026</span> Amin Farahani — Full-Stack Web Developer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- ==================== End CTA + Footer ==================== -->
+
+            </main>
+        </div>
+    </div>
+
+
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/jquery-migrate-3.4.0.min.js"></script>
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollSmoother.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/smoother-script.js"></script>
+    <script src="../assets/js/springer.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

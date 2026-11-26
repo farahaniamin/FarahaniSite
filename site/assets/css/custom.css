@@ -1,0 +1,618 @@
+/* ===================================
+    Resume overrides on top of Mivon
+====================================== */
+
+/* Text logo (replaces the image logo) */
+.navbar .logo-text {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #fff;
+  width: auto;
+}
+body.light .navbar .logo-text {
+  color: #1f1f1f;
+}
+
+/* Tech stack rows: category label + long item list */
+.awards-reval .item-row .award-position {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.awards-reval .item-row .award-text {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* Contact form status message */
+#resume-contact .messages .alert {
+  border-radius: 15px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 991px) {
+  .awards-reval .item-row .award-position {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .awards-reval .item-row .award-text {
+    font-size: 18px;
+  }
+}
+
+/* Hero stat badge: keep "10+" on one line */
+.hero-style7 .exp h2 {
+  white-space: nowrap;
+}
+
+/* Expertise rows: number + title on one baseline, title wraps as a block */
+.services-reval .serv-title {
+  display: flex;
+  align-items: baseline;
+}
+.services-reval .serv-title .fs-40 {
+  line-height: 1.15;
+}
+
+/* Project cards: long titles must not break mid-word */
+.serv-style2 .item h2 {
+  font-size: clamp(36px, 4.2vw, 60px);
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* Approach cards are narrow: never split words */
+.features .item h6,
+.features .item p {
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+/* Contact details: stacked, never split the email address */
+.footer-style4 .contact-info li {
+  display: block;
+  margin: 0 0 10px;
+  font-size: 18px;
+  word-break: normal;
+}
+
+/* Works carousel stacks on tablet/mobile: drop the .row negative margins so gutters are even */
+@media screen and (max-width: 991px) {
+  .hr-sec .hr-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* ===================================
+    Works gallery — browser-frame project shots
+====================================== */
+.works-head {
+  padding-top: 120px;
+}
+
+.hr-sec .fit-img.shot-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 30px;
+  background:
+    radial-gradient(120% 70% at 50% 0%, color-mix(in srgb, var(--accent) 28%, transparent) 0%, transparent 70%),
+    #1C1C1C;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.shot-browser {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0f0f0f;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition: transform 0.5s ease;
+}
+.shot-panel:hover .shot-browser {
+  transform: translateY(-6px);
+}
+
+.shot-bar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 34px;
+  padding: 0 14px;
+  background: #242424;
+}
+.shot-dots {
+  display: flex;
+  gap: 6px;
+}
+.shot-dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+.shot-dots i:first-child {
+  background: var(--accent);
+}
+.shot-url {
+  flex: 1;
+  max-width: 260px;
+  margin: 0 auto;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shot-view {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+.hr-sec .shot-view img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+/* full-page captures scroll through on hover (and slowly on touch screens) */
+.hr-sec .shot-view img {
+  transition: object-position 10s ease-in-out;
+}
+.hr-sec .shot-panel:hover .shot-view img {
+  object-position: bottom center;
+}
+@media (hover: none), (max-width: 991px) {
+  .hr-sec .shot-view img {
+    animation: shot-scroll 18s ease-in-out infinite alternate;
+    animation-play-state: paused;
+  }
+}
+@keyframes shot-scroll {
+  0%, 10% { object-position: top center; }
+  90%, 100% { object-position: bottom center; }
+}
+
+.shot-meta {
+  flex: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+.shot-kind {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.shot-title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.shot-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.7;
+  max-width: 460px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.shot-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.shot-tags span {
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 12px;
+}
+.shot-link {
+  flex: none;
+}
+
+/* light mode */
+body.light .hr-sec .fit-img.shot-panel {
+  background:
+    radial-gradient(120% 70% at 50% 0%, color-mix(in srgb, var(--accent) 22%, transparent) 0%, transparent 70%),
+    #f3f3f1;
+  border-color: rgba(0, 0, 0, 0.06);
+}
+body.light .shot-bar {
+  background: #e6e6e3;
+}
+body.light .shot-dots i {
+  background: rgba(0, 0, 0, 0.18);
+}
+body.light .shot-url {
+  background: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.55);
+}
+body.light .shot-tags span {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 991px) {
+  .works-head {
+    padding-top: 80px;
+  }
+  .hr-sec .hr-container .item-panel .fit-img.shot-panel {
+    height: 620px;
+    padding: 20px;
+  }
+  .works-hint {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .hr-sec .hr-container .item-panel .fit-img.shot-panel {
+    height: 560px;
+  }
+  .shot-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .shot-title {
+    font-size: 24px;
+  }
+}
+
+/* ===================================
+    Resume artwork
+====================================== */
+.intro-style3 .box-bgimg1:after {
+  background-image: url(../imgs/resume/bento-edtech.webp);
+}
+.intro-style3 .box-bgimg:after {
+  background-image: url(../imgs/resume/bento-data.webp);
+  background-position: right center;
+}
+/* stacking-card artwork: soften the seam where the render meets the card colour */
+.serv-style2 .item .fit-img img {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 18%);
+  mask-image: linear-gradient(to right, transparent 0, #000 18%);
+}
+
+/* ===================================
+    Article pages
+====================================== */
+.article-hero {
+  padding-top: 180px;
+}
+.article-hero h1 {
+  line-height: 1.1;
+}
+.article-cover {
+  height: 560px;
+}
+.article-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-post .lead-p {
+  font-size: 20px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+.main-post .text p {
+  line-height: 1.8;
+}
+.main-post .unorder-list li {
+  line-height: 1.7;
+}
+
+.main-post code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.main-post pre.code {
+  position: relative;
+  margin: 25px 0 35px;
+  padding: 44px 24px 22px;
+  border-radius: 18px;
+  background: #0f0f0f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-x: auto;
+  direction: ltr;
+  text-align: left;
+}
+.main-post pre.code:before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #DDF160;
+}
+.main-post pre.code code {
+  padding: 0;
+  background: none;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #e6e6e6;
+  white-space: pre;
+}
+
+.main-post .post-note {
+  padding: 26px 30px;
+  border-radius: 20px;
+  border-left: 3px solid #DDF160;
+  background: rgba(221, 241, 96, 0.06);
+  line-height: 1.7;
+}
+
+.main-post .post-navs {
+  gap: 30px;
+}
+.main-post .post-nav {
+  max-width: 48%;
+}
+
+/* blog cards on the home page: make the excerpt readable, keep images clickable */
+.blog-style2 .item p {
+  line-height: 1.6;
+}
+
+/* light mode */
+body.light .main-post code {
+  background: rgba(0, 0, 0, 0.06);
+}
+body.light .main-post pre.code {
+  background: #f4f4f2;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+body.light .main-post pre.code:before {
+  color: #6b7a00;
+}
+body.light .main-post pre.code code {
+  color: #1f1f1f;
+}
+
+@media screen and (max-width: 991px) {
+  .article-hero {
+    padding-top: 140px;
+  }
+  .article-hero h1 {
+    font-size: 42px !important;
+  }
+  .article-cover {
+    height: 320px;
+  }
+  .main-post .post-nav {
+    max-width: 100%;
+  }
+  .main-post .post-navs {
+    flex-direction: column;
+  }
+}
+.main-post code {
+  color: #DDF160;
+}
+body.light .main-post code {
+  color: #4f5c00;
+}
+.intro-style3 .box-bgimg:after {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 40%);
+  mask-image: linear-gradient(to right, transparent 0, #000 40%);
+}
+
+/* article covers are 16:10 renders — keep the whole composition visible */
+.article-cover {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+@media screen and (max-width: 991px) {
+  .article-cover {
+    height: auto;
+  }
+}
+
+/* ===================================
+    Social tiles (contact section)
+====================================== */
+.social-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.social-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 84px;
+}
+.social-tile img {
+  width: 84px;
+  height: 84px;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+.social-tile span {
+  font-size: 12px;
+  opacity: 0.6;
+  transition: opacity 0.35s ease;
+}
+.social-tile:hover img {
+  transform: translateY(-6px) scale(1.04);
+  filter: drop-shadow(0 10px 18px rgba(221, 241, 96, 0.25));
+}
+.social-tile:hover span {
+  opacity: 1;
+}
+@media screen and (max-width: 575px) {
+  .social-tiles {
+    gap: 12px;
+  }
+  .social-tile,
+  .social-tile img {
+    width: 68px;
+  }
+  .social-tile img {
+    height: 68px;
+  }
+}
+
+/* full-name text logo: never wrap */
+.navbar .logo.logo-text {
+  width: auto !important;
+  max-width: none !important;
+  white-space: nowrap;
+}
+@media screen and (max-width: 991px) {
+  .navbar .logo.logo-text {
+    font-size: 22px;
+  }
+}
+
+/* ===================================
+    Portfolio carousel page
+====================================== */
+.parallax-slider-wrapper .parallax-img {
+  background-position: top center;
+}
+.parallax-slider-wrapper .parallax-content {
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+.portfolio-hint {
+  position: fixed;
+  left: 70px;
+  bottom: 28px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  pointer-events: none;
+}
+.portfolio-hint-line {
+  width: 60px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+body.light .portfolio-hint-line {
+  background: rgba(0, 0, 0, 0.4);
+}
+/* touch screens have no hover: always show the project name */
+@media (hover: none) {
+  .parallax-slider-wrapper .parallax-content {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  .parallax-slider-wrapper .parallax-img::after {
+    opacity: 1;
+    visibility: visible;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 55%);
+  }
+}
+@media screen and (max-width: 991px) {
+  .portfolio-hint {
+    left: 40px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .portfolio-hint {
+    left: 20px;
+  }
+}
+
+/* ===================================
+    Project detail pages
+====================================== */
+.pd-shot {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0f0f0f;
+  box-shadow: 0 30px 60px -25px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.pd-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.pd-gallery-pair .pd-shot {
+  height: 100%;
+}
+.pd-shot .shot-dots i:first-child {
+  background: var(--accent);
+}
+.pd-shot .shot-url {
+  max-width: 340px;
+}
+body.light .pd-shot {
+  background: #f3f3f1;
+  box-shadow: 0 30px 60px -25px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+.article-hero .info .item h6 a {
+  color: inherit;
+}
+.main-post .post-navs {
+  align-items: flex-start;
+}
+
+/* home gallery: clickable project titles */
+.shot-title a {
+  color: inherit;
+}
+.shot-title a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Touch-compatible versions of the desktop gallery and artwork. */
+.shot-panel.is-in-view .shot-view img { animation-play-state: running; }
+@media screen and (max-width: 991px) {
+  .hr-sec { overflow: hidden; }
+  .hr-sec .hr-container { width: max-content; flex-wrap: nowrap; }
+  .hr-sec .hr-container .item-panel { width: min(88vw, 620px); flex: none; }
+  .hr-sec .hr-container .item-panel .fit-img.shot-panel {
+    height: min(620px, 78svh); min-height: 390px; padding: 16px; gap: 14px;
+  }
+  .shot-title { font-size: 22px; }
+  .shot-kind { margin-bottom: 4px; font-size: 11px; }
+  .shot-tags { margin-top: 8px; }
+  .shot-tags span { padding: 4px 8px; }
+  #highlights .stackCard { width: 100%; }
+  #highlights .item { min-height: 0; overflow: hidden; }
+  #highlights .item .cont { padding: 28px; }
+  #highlights .item .md-hide { display: block; }
+  #highlights .item .fit-img { height: clamp(180px, 52vw, 300px) !important; }
+  #highlights .item .fit-img img {
+    object-fit: cover; object-position: center;
+    mask-image: linear-gradient(to bottom, transparent, #000 18%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hr-sec .hr-container { width: 100%; flex-wrap: wrap; }
+  .hr-sec .hr-container .item-panel { width: 100%; }
+  .hr-sec .shot-view img { animation: none; transition: none; }
+  .shot-panel:hover .shot-browser { transform: none; }
+}

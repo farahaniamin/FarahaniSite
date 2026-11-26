@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="One small site-specific plugin and the right hooks can replace a pile of plugins — faster admin, fewer conflicts, safer updates.">
+    <meta name="author" content="Amin Farahani">
+
+    <meta property="og:title" content="Custom WooCommerce features without plugin bloat">
+    <meta property="og:description" content="One small site-specific plugin and the right hooks can replace a pile of plugins — faster admin, fewer conflicts, safer updates.">
+    <meta property="og:type" content="article">
+
+    <title>Custom WooCommerce features without plugin bloat — Amin Farahani</title>
+
+    <link rel="shortcut icon" href="../assets/imgs/favicon.ico">
+    <link rel="icon" sizes="32x32" href="../assets/imgs/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="../assets/imgs/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Mozilla+Text:wght@200..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/plugins.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+
+</head>
+
+<body class="home-freelancer article-page">
+
+
+    <div class="cursor"></div>
+    <div class="blur-div"></div>
+
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+
+    <!-- ==================== Start Navbar ==================== -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container align-items-center">
+
+            <a class="logo logo-text" href="../index.html">Amin Farahani<span class="main-color">.</span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#work"><span class="rolling-text">Work</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#expertise"><span class="rolling-text">Expertise</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#highlights"><span class="rolling-text">Highlights</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#blog"><span class="rolling-text">Blog</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#contact"><span class="rolling-text">Contact</span></a></li>
+                </ul>
+            </div>
+
+            <div class="dark-mode-icon">
+                <button type="button" class="theme-icon" aria-label="Toggle between dark and light mode">
+                    <i aria-hidden="true" class="pe-7s-moon moon"></i>
+                    <i aria-hidden="true" class="pe-7s-sun sun"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== End Navbar ==================== -->
+
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main class="o-hidden">
+
+                <!-- ==================== Start Article Header ==================== -->
+
+                <header class="pg-hero article-hero">
+                    <div class="container">
+                        <div class="row mb-60px">
+                            <div class="col-lg-2">
+                                <div class="pt-15px">
+                                    <span class="butn-bord-sm mb-15px">WordPress</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <h1 class="fs-70">Custom WooCommerce features without plugin bloat</h1>
+                                <div class="info d-flex flex-wrap mt-40px align-items-center">
+                                    <div class="d-flex align-items-center mr-50px mb-15px">
+                                        <span class="fit-img w-60px h-60px o-hidden border-radius-50">
+                                            <img src="../assets/imgs/hero/amin.webp" alt="Amin Farahani">
+                                        </span>
+                                        <span class="ml-20px">
+                                            <span class="d-block opacity-7 mb-5px">Author</span>
+                                            <span class="fs-18 fw-500">Amin Farahani</span>
+                                        </span>
+                                    </div>
+                                    <div class="mr-50px mb-15px">
+                                        <span class="d-block opacity-7 mb-5px">Published</span>
+                                        <span class="fs-18 fw-500">October 22, 2026</span>
+                                    </div>
+                                    <div class="mb-15px">
+                                        <span class="d-block opacity-7 mb-5px">Reading time</span>
+                                        <span class="fs-18 fw-500">5 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="article-cover o-hidden border-radius-30px">
+                            <img src="../assets/imgs/blog/blog-woocommerce.webp" alt="Custom WooCommerce features without plugin bloat">
+                        </div>
+                    </div>
+                </header>
+
+                <!-- ==================== End Article Header ==================== -->
+
+
+                <!-- ==================== Start Article Body ==================== -->
+
+                <section class="pb-80px pt-80px">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="main-post">
+                                    <article class="item pb-60px">
+                                        <div class="text mb-30px"><p class="lead-p">Many slow WooCommerce stores have the same story: every small request — one extra checkout field, a quantity discount, a warranty label — became another plugin. Forty plugins later the admin is sluggish, updates are scary and nobody knows which one breaks checkout. On the stores I build, small features live in one site-specific plugin, written against WooCommerce's own hooks.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>1. One site-specific plugin (not functions.php)</h4></div>
+                                        <div class="text mb-20px"><p>Code in a theme's <code>functions.php</code> disappears when the theme changes. A tiny plugin survives redesigns and can be versioned in Git. Declare compatibility with High-Performance Order Storage (HPOS) from day one:</p></div>
+                                        <pre class="code" data-lang="php"><code>&lt;?php
+/**
+ * Plugin Name: Store Customizations
+ * Description: Site-specific WooCommerce features.
+ */
+defined( &#x27;ABSPATH&#x27; ) || exit;
+
+add_action( &#x27;before_woocommerce_init&#x27;, function () {
+    if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( &#x27;custom_order_tables&#x27;, __FILE__, true );
+    }
+} );</code></pre>
+                                        <div class="text mb-20px"><p>With HPOS, read and write order data through <code>wc_get_order()</code> and <code>$order-&gt;get_meta()</code> / <code>update_meta_data()</code> — never <code>get_post_meta()</code> on orders.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>2. Checkout fields with a filter</h4></div>
+                                        <div class="text mb-20px"><p>On the classic (shortcode) checkout, adding or removing fields is a single filter, and saving the value is one action:</p></div>
+                                        <pre class="code" data-lang="php"><code>add_filter( &#x27;woocommerce_checkout_fields&#x27;, function ( $fields ) {
+    unset( $fields[&#x27;billing&#x27;][&#x27;billing_company&#x27;] );
+
+    $fields[&#x27;billing&#x27;][&#x27;billing_national_code&#x27;] = array(
+        &#x27;label&#x27;    =&gt; &#x27;National code&#x27;,
+        &#x27;required&#x27; =&gt; false,
+        &#x27;priority&#x27; =&gt; 35,
+    );
+    return $fields;
+} );
+
+add_action( &#x27;woocommerce_checkout_create_order&#x27;, function ( $order, $data ) {
+    if ( ! empty( $data[&#x27;billing_national_code&#x27;] ) ) {
+        $order-&gt;update_meta_data( &#x27;_national_code&#x27;, $data[&#x27;billing_national_code&#x27;] );
+    }
+}, 10, 2 );</code></pre>
+                                        <div class="text mb-20px"><p>Stores on the block-based Checkout use the Additional Checkout Fields API (<code>woocommerce_register_additional_checkout_field()</code>) instead — check which checkout the store runs before writing code.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>3. Custom product data in the admin</h4></div>
+                                        <pre class="code" data-lang="php"><code>add_action( &#x27;woocommerce_product_options_general_product_data&#x27;, function () {
+    woocommerce_wp_text_input( array(
+        &#x27;id&#x27;    =&gt; &#x27;_warranty_months&#x27;,
+        &#x27;label&#x27; =&gt; &#x27;Warranty (months)&#x27;,
+        &#x27;type&#x27;  =&gt; &#x27;number&#x27;,
+    ) );
+} );
+
+add_action( &#x27;woocommerce_admin_process_product_object&#x27;, function ( $product ) {
+    if ( isset( $_POST[&#x27;_warranty_months&#x27;] ) ) {
+        $product-&gt;update_meta_data( &#x27;_warranty_months&#x27;, absint( $_POST[&#x27;_warranty_months&#x27;] ) );
+    }
+} );</code></pre>
+                                        <div class="text mb-20px"><p>Display it on the product page with a small callback on <code>woocommerce_single_product_summary</code> — no page-builder widget required.</p></div>
+                                        <div class="title mt-50px mb-20px"><h4>4. Pricing rules in a few lines</h4></div>
+                                        <div class="text mb-20px"><p>A "10% off when you buy 10 or more" rule doesn't need a dynamic-pricing suite:</p></div>
+                                        <pre class="code" data-lang="php"><code>add_action( &#x27;woocommerce_before_calculate_totals&#x27;, function ( $cart ) {
+    if ( is_admin() &amp;&amp; ! defined( &#x27;DOING_AJAX&#x27; ) ) {
+        return;
+    }
+    foreach ( $cart-&gt;get_cart() as $item ) {
+        if ( $item[&#x27;quantity&#x27;] &gt;= 10 ) {
+            $product = $item[&#x27;data&#x27;];
+            // base it on the regular price, so repeated runs never stack the discount
+            $product-&gt;set_price( (float) $product-&gt;get_regular_price() * 0.9 );
+        }
+    }
+} );</code></pre>
+                                        <div class="title mt-50px mb-20px"><h4>5. Move heavy work to the background</h4></div>
+                                        <div class="text mb-20px"><p>Syncing an order to an ERP, sending it to a shipping API or generating an invoice should never slow down the customer's checkout. WooCommerce ships with Action Scheduler, so background jobs need no extra plugin:</p></div>
+                                        <pre class="code" data-lang="php"><code>add_action( &#x27;woocommerce_order_status_processing&#x27;, function ( $order_id ) {
+    as_enqueue_async_action( &#x27;store_sync_order&#x27;, array( &#x27;order_id&#x27; =&gt; $order_id ) );
+} );
+
+add_action( &#x27;store_sync_order&#x27;, function ( $order_id ) {
+    $order = wc_get_order( $order_id );
+    // call the external API here; failures are logged and can be retried
+} );</code></pre>
+                                        <div class="title mt-50px mb-20px"><h4>6. Measure before and after</h4></div>
+                                        <div class="unorder-list mb-30px"><ul class="rest"><li><strong>Query Monitor</strong> shows slow queries, hooks and HTTP calls per page.</li><li>Check the size of autoloaded options — WordPress 6.6+ warns about it in Site Health.</li><li>Cache expensive queries in transients, and add a Redis object cache on busy stores.</li></ul></div>
+                                        <div class="post-note mb-30px"><strong>Takeaway:</strong> plugins are great for big, maintained integrations — payment gateways, shipping, SEO. For small, store-specific behaviour, a few well-placed hooks are faster, safer and easier to maintain.</div>
+                                    </article>
+
+                                    <div class="info-area d-flex pt-50px">
+                                        <div class="tags d-flex align-items-center">
+                                            <div><span>Tags :</span></div>
+                                            <div><a href="../index.html#blog">WooCommerce</a><a href="../index.html#blog">WordPress</a><a href="../index.html#blog">PHP</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-navs d-flex justify-content-between mt-50px">
+                                        <a href="./scraped-data-to-structured-output.html" class="post-nav text-align-left">
+                                            <span class="fs-13 text-uppercase opacity-7">← Previous article</span>
+                                            <h6 class="mt-10px">Turning scraped data into clean, structured outputs</h6>
+                                        </a>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== End Article Body ==================== -->
+
+
+                <!-- ==================== Start CTA + Footer ==================== -->
+
+                <footer class="footer-style4 contact-footer">
+                    <div class="sub-bg border-radius-30px">
+                        <div class="container pb-80px pt-80px">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8 md-mb30">
+                                    <h2 class="fs-60 mb-15px">Have a project in mind?</h2>
+                                    <p>A bot, an integration, a store or a web app — let's talk about it.</p>
+                                </div>
+                                <div class="col-lg-4 d-flex justify-content-lg-end">
+                                    <a href="../index.html#contact" class="butn-arrow butn-rounded main-colorbg">
+                                        <span class="text-uppercase fs-14 fw-500">Get in touch</span>
+                                        <span class="arrow-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                            </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container pt-30px pb-30px line-top border-color-transparent-white-light">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="links">
+                                        <ul class="rest d-flex">
+                                            <li class="mr-30px"><a href="../index.html#work">Work</a></li>
+                                            <li class="mr-30px"><a href="../index.html#expertise">Expertise</a></li>
+                                            <li><a href="../index.html#blog">Blog</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="copyright d-flex">
+                                        <div class="ml-auto">
+                                            <p class="fz-13">© <span class="js-year">2026</span> Amin Farahani — Full-Stack Web Developer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- ==================== End CTA + Footer ==================== -->
+
+            </main>
+        </div>
+    </div>
+
+
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/jquery-migrate-3.4.0.min.js"></script>
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollSmoother.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/smoother-script.js"></script>
+    <script src="../assets/js/springer.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
